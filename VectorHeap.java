@@ -3,29 +3,16 @@
 * Jose Rosales, 12576
 */
 
-public class VectorHeap<E> {
-    
-	 private nodo Node;
-     private String string;
-     private String btree;
- 
-    public  void addNodo(){
-        if(Node == null){
-            Node = new nodo();
-        }
-        else{
-            Node = Node;
-        }  
-    }
+import java.util.Vector;
+import java.util.PriorityQueue;
+public  class VectorHeap<E extends Comparable<E>> extends PriorityQueue<E>{
 
-    public String Buscar(String cadena){
-        string = cadena;
-        return string;   
-       }
-    
-   public void B_Help(nodo Nodo){
-       if(Nodo == null) {
-    	   return  ;
-       }   
-   }
+
+	PriorityQueue data; // the data, kept in heap order
+
+	public VectorHeap()
+	// post: constructs a new priority queue
+	{
+		data = new PriorityQueue();
+	}
 }
